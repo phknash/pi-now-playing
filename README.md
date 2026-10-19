@@ -2,7 +2,7 @@
 
 A small e-paper display on my desk that shows whatever is playing on my Bose speaker – from **any** source (Spotify, AirPlay, radio) – with the album cover, track and artist.
 
-Built on a Raspberry Pi 3 Model B that was sitting in a drawer, as my first "real world" coding project.
+Built on a Raspberry Pi 3 Model B that was sitting in a drawer, as my first Raspberry PI coding project.
 
 ![What the screen shows](images/screen-preview.png)
 
@@ -10,7 +10,7 @@ Built on a Raspberry Pi 3 Model B that was sitting in a drawer, as my first "rea
 
 ## Why I built it
 
-I wanted a fun, small project that would make me learn by doing: hardware, Python, APIs, and running something that works on its own without me babysitting it. It was inspired by [this Spotify desk widget](https://medium.com/@kikeonline/spotify-desk-widget-with-a-raspberry-pi-and-e-paper-display-d94ebf47a900), but I took a different route:
+I wanted a fun, small project that would help me to learn by doing: hardware, Python, APIs, and running something that works on its own without me babysitting it. It was inspired by [this Spotify desk widget](https://medium.com/@kikeonline/spotify-desk-widget-with-a-raspberry-pi-and-e-paper-display-d94ebf47a900), but I took a different route:
 
 - **Any source, not just Spotify.** I play to my speaker from different apps, so the display asks the *speaker* what it's playing rather than asking Spotify.
 - **One device, no Home Assistant.** The original used a second server; mine runs everything on the Pi.
@@ -20,7 +20,7 @@ I wanted a fun, small project that would make me learn by doing: hardware, Pytho
 ```
 Phone ──(AirPlay / Spotify)──▶ Bose speaker
                                     ▲
-                                    │ "what are you playing?"  (every 15 s)
+                                    │ "what are you playing?"  (every 10 s)
                                     │
 Raspberry Pi ── sources.py ─────────┘
      │            └─ if it's a Spotify track, also asks the Spotify API for cleaner details + cover
@@ -43,7 +43,7 @@ A few decisions worth calling out:
 
 - Raspberry Pi 3 Model B
 - Waveshare 3.7" e-Paper HAT (480×280, 4 greys)
-- microSD card, official Pi power supply
+- microSD card, Pi power supply
 - Bose Portable Smart Speaker (any Bose speaker that works with the Bose app *should* work – see note below)
 
 ## Files
