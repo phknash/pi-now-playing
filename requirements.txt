@@ -1,0 +1,6 @@
+spotipy
+python-dotenv
+pillow
+requests
+pybose
+PyJWT          # pybose needs this but forgets to install it

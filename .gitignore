@@ -1,0 +1,9 @@
+# Keep secrets and personal files out of Git/GitHub
+.env
+.cache
+venv/
+__pycache__/
+preview.png
+.DS_Store
+# Waveshare's screen driver - downloaded on the Pi (see README), not my code
+waveshare_epd/

@@ -1,0 +1,20 @@
+# systemd service: starts the display automatically when the Pi boots.
+# Install on the Pi with:
+#   sudo cp nowplaying.service /etc/systemd/system/
+#   sudo systemctl daemon-reload && sudo systemctl enable --now nowplaying
+# (Change "p2nash" to your own Pi username if different.)
+
+[Unit]
+Description=Now playing display
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=p2nash
+WorkingDirectory=/home/p2nash/spotify-now-playing
+ExecStart=/home/p2nash/spotify-now-playing/venv/bin/python -u display_preview.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
