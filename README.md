@@ -98,3 +98,4 @@ I built this with [Claude](https://claude.ai) as a coach – early on it wrote m
 ## License
 
 MIT – see [LICENSE](LICENSE).
+# pi-now-playing
